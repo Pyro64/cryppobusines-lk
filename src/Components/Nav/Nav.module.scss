@@ -1,0 +1,60 @@
+@import '../../Style/Mixins';
+.container {
+}
+.link {
+    display: flex;
+    align-items: center;
+    position: relative;
+    background: #e9e9e9;
+    color: #6d6d6d;
+    font-weight: 500;
+    border-radius: 10px;
+    overflow: hidden;
+    @include fluid(font-size, 12px, 14px);
+    @include fluid(margin-bottom, 15px, 20px);
+    @include fluid(padding-top, 10px, 20px);
+    @include fluid(padding-bottom, 10px, 20px);
+    @include fluid(padding-left, 10px, 20px);
+    @include fluid(padding-right, 10px, 20px);
+    transition: 0.38s ease-in-out;
+    z-index: 1;
+    img {
+        position: relative;
+        z-index: 2;
+        object-fit: contain;
+        transition: 0.38s ease-in-out;
+        filter: invert(45%) sepia(7%) saturate(23%) hue-rotate(349deg) brightness(92%) contrast(92%);
+        @include fluid(margin-right, 10px, 15px);
+        @include fluid(width, 15px, 20px);
+        @include fluid(height, 15px, 20px);
+    }
+    p {
+        position: relative;
+        z-index: 2;
+    }
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 0;
+        height: 100%;
+        background: linear-gradient(91.42deg, #2f69ff 0%, #bc2fff 100%);
+        transition: 0.38s ease-in-out;
+    }
+    &.active {
+        color: #fff;
+        img {
+            filter: none;
+        }
+        &::before {
+            width: 100%;
+            background-size: 100% 100%;
+        }
+        &:hover {
+            &::before {
+                background-size: 150% 100%;
+            }
+        }
+    }
+}

@@ -1,0 +1,9 @@
+@import '../../Style/Mixins';
+
+.logo {
+    transition: 0.38s ease-out;
+    object-fit: contain;
+    @include fluid(width, 150px, 200px);
+    @include fluid(height, 30px, 52px);
+    @include fluid(margin-bottom, 25px, 50px);
+}

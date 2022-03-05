@@ -32,3 +32,10 @@ input:focus::-webkit-input-placeholder {
 textarea:focus::-webkit-input-placeholder {
   color: transparent;
 }
+.App {
+  display: flex;
+  position: relative;
+  max-width: 1920px;
+  width: 100%;
+  min-height: 100vh;
+}

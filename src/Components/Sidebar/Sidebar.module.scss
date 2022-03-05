@@ -1,0 +1,16 @@
+@import '../../Style/Mixins';
+
+.container {
+    position: sticky;
+    left: 0;
+    top: 0;
+    width: 25%;
+    height: 100vh;
+    z-index: 1;
+    border-right: 1px solid #424242;
+    transition: 0.38s ease-in-out;
+    @include fluid(padding-top, 20px, 40px);
+    @include fluid(padding-bottom, 20px, 40px);
+    @include fluid(padding-right, 30px, 60px);
+    @include fluid(padding-left, 30px, 60px);
+}
