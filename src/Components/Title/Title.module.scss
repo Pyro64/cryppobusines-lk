@@ -1,0 +1,7 @@
+@import '../../Style/Mixins';
+
+.title {
+	font-weight: 500;
+    color: #6D6D6D;
+	@include fluid(font-size, 28px, 36px);
+}

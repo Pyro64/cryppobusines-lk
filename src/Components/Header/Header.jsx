@@ -1,10 +1,12 @@
 import React from 'react';
-
-const Header = () => {
+import ThemeControl from '../ThemeControl/ThemeControl';
+import Title from '../Title/Title';
+import style from './Header.module.scss'
+const Header = (props) => {
     return (
-        <div>
-            Title
-            Theme
+        <div className={style.container}>
+            <Title />
+            <ThemeControl theme={props.theme} toggle={props.toggle} />
         </div>
     );
 }

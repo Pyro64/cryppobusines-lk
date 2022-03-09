@@ -3,7 +3,6 @@ import { connect } from "react-redux";
 
 
 let mapStateToProps = (state) => {
-    debugger
     return {
         nav: state.nav,
     }

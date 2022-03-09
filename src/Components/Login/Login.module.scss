@@ -1,0 +1,67 @@
+@import '../../Style/Mixins';
+
+.container {
+    border-radius: 10px;
+    padding: 30px 30px 15px 30px;
+    @include fluid(padding, 15px, 30px);
+}
+.block {
+    display: flex;
+    align-items: center;
+    @include fluid(margin-bottom, 15px, 30px);
+    img {
+        object-fit: cover;
+        @include fluid(margin-right, 10px, 15px);
+        @include fluid(width, 26px, 44px);
+        @include fluid(height, 26px, 44px);
+        border-radius: 50%;
+    }
+    p {
+        margin-bottom: 5px;
+        @include fluid(font-size, 12px, 14px);
+    }
+    button {
+        border: none;
+        background: none;
+        cursor: pointer;
+        color: #6d6d6d;
+        @include fluid(font-size, 10px, 12px);
+    }
+}
+.link {
+    display: flex;
+    align-items: center;
+    color: #000;
+    position: relative;
+    @include fluid(font-size, 12px, 14px);
+    @include fluid(padding-top, 5px, 10px);
+    @include fluid(padding-bottom, 5px, 10px);
+    &::before {
+        content: '';
+        position: absolute;
+        @include fluid(left, -15px, -30px);
+        top: 0;
+        width: 0;
+        height: 100%;
+        transition: 0.38s ease-in-out;
+        background: linear-gradient(91.42deg, rgba(47, 105, 255, 0.21) 0%, rgba(188, 47, 255, 0) 100%);
+    }
+}
+.active {
+    &::before {
+        width: 100%;
+    }
+}
+.message {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(122.76deg, #2f69ff 0%, #bc2fff 92.55%), #c4c4c4;
+    border-radius: 50%;
+    color: #fff;
+    line-height: 0;
+    @include fluid(margin-left, 5px, 10px);
+    @include fluid(width, 14px, 16px);
+    @include fluid(height, 14px, 16px);
+    @include fluid(font-size, 8px, 10px);
+}

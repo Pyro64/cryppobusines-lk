@@ -1,0 +1,7 @@
+@import '../../Style/Mixins';
+
+.container {
+    @include flex;
+    position: relative;
+    @include fluid(margin-bottom, 25px, 50px);
+}
